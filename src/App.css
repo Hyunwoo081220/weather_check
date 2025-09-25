@@ -1,0 +1,131 @@
+.app-root {
+  min-height: 100vh;
+  background: #f5f5f5;
+  color: #222;
+  transition: background 0.25s ease, color 0.25s ease;
+  padding: 40px 20px;
+}
+
+.app-root.dark {
+  background: #121212;
+  color: #e9e9e9;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.toggleBtn {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 50;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #222;
+  color: #fff;
+  font-size: 14px;
+}
+
+.app-root.dark .toggleBtn {
+  background: #eee;
+  color: #111;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 26px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.searchRow {
+  display: flex;
+  gap: 8px;
+}
+
+.input {
+  padding: 10px 12px;
+  width: 260px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.app-root.dark .input {
+  background: #2b2b2b;
+  border: 1px solid #444;
+  color: #eee;
+}
+
+.searchBtn {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #3f51b5;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.searchBtn:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.card, .forecastCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.app-root.dark .card, .app-root.dark .forecastCard {
+  background: #1f1f1f;
+}
+
+.cardHeader { display: flex; justify-content: space-between; align-items: center; }
+.city { font-size: 20px; margin:0; }
+.cardBody { display: flex; gap: 18px; margin-top:12px; }
+.weatherIcon { width:84px; height:84px; }
+.weatherDetails { text-align:left; }
+
+.forecastCards .cardsWrapper {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.forecastCard {
+  width: 120px;
+  text-align: center;
+  padding: 12px;
+}
+
+.forecastIcon { width:60px; height:60px; }
+.forecastDate { font-weight:600; margin:0; }
+.forecastDesc { font-size:14px; margin:4px 0; }
+
+.forecastChart { margin-top:20px; }
+
+.notFound {
+  margin-top: 12px;
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+@media (max-width: 540px) {
+  .input { width:160px; }
+  .cardBody { flex-direction: column; align-items: flex-start; }
+  .forecastCards .cardsWrapper { gap:8px; }
+}
