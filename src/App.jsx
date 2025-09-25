@@ -9,7 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import "./App.css";
-const API_KEY = process.env.REACT_APP_WEATHER_API_KEY || "1a766f229736e7388ae8420317097087";
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY || "";
 console.log("API_KEY:", API_KEY); // 확인용
 
 
